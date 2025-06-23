@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/ride-hailing/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/ride-hailing/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/ride-hailing",
+  "projects": {
+    "logging-service": {
+      "type": "application",
+      "root": "apps/logging-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/logging-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/logging-service/tsconfig.app.json"
+      }
+    },
+    "ride-hailing": {
+      "type": "application",
+      "root": "apps/ride-hailing",
+      "entryFile": "main",
+      "sourceRoot": "apps/ride-hailing/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ride-hailing/tsconfig.app.json"
+      }
+    }
+  }
+}
