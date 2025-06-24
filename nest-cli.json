@@ -10,22 +10,31 @@
   "monorepo": true,
   "root": "apps/ride-hailing",
   "projects": {
-    "logging-service": {
+    "logging": {
       "type": "application",
-      "root": "apps/logging-service",
+      "root": "apps/logging",
       "entryFile": "main",
-      "sourceRoot": "apps/logging-service/src",
+      "sourceRoot": "apps/logging/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/logging-service/tsconfig.app.json"
+        "tsConfigPath": "apps/logging/tsconfig.app.json"
       }
     },
-    "ride-hailing": {
+    "rider": {
       "type": "application",
-      "root": "apps/ride-hailing",
+      "root": "apps/rider",
       "entryFile": "main",
-      "sourceRoot": "apps/ride-hailing/src",
+      "sourceRoot": "apps/rider/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/ride-hailing/tsconfig.app.json"
+        "tsConfigPath": "apps/rider/tsconfig.app.json"
+      }
+    },
+    "uber-services": {
+      "type": "application",
+      "root": "apps/uber-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/uber-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/uber-services/tsconfig.app.json"
       }
     }
   }
